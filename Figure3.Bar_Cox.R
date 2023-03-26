@@ -1,8 +1,8 @@
 ##Figure3.Sur
 source("/users/zhuxl/HAPS/Code_Script/0.suppressMessages.R")
-setwd("/users/zhuxl/HAPS/Code_Script/Figure 3")
+setwd("/users/zhuxl/HAPS/Code_Script")
 
-data<-read.xlsx("../WES_Cohort.xlsx",sheet=1)
+data<-read.xlsx("./WES_Cohort.xlsx",sheet=1)
 dim(data)
 #[1] 1125   29
 #head(data)

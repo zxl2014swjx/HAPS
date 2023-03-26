@@ -1,6 +1,8 @@
-setwd("E:/HAPS/2022")
+##Figure2.Cox_Stage_RECIST_density
+source("/users/zhuxl/HAPS/Code_Script/0.suppressMessages.R")
+setwd("/users/zhuxl/HAPS/Code_Script")
 
-data<-read.table("clipboard",header=T,sep="\t")
+data<-read.xlsx("./WES_Cohort.xlsx",sheet=3)
 OS <- Surv(data$OS_Months,data$OS_Event==1)
 
 sing_OS<-data.frame()
@@ -23,7 +25,10 @@ mutil_OS<-rbind(mutil_OS,d)
 write.csv(mutil_OS,"mutil_OS.csv")
 
 OS_data<-read.table("clipboard",header=FALSE,sep="\t")
+###Multi Cox Analysis	Pvalue	HR	95%CI
 OS_draw<-read.table("clipboard",header=TRUE,sep="\t")
+###HR	LowerCI	UpperCI
+
 
 pdf("Fig 2 single_cox.pdf",height=4,width=8)
 forestplot::forestplot(OS_data, 
@@ -52,7 +57,7 @@ dev.off()
 
 ###############
 
-data<-read.xlsx("../WES_Cohort.xlsx",sheet=1)
+data<-read.xlsx("./WES_Cohort.xlsx",sheet=1)
 
 
 my_comparisons<-list(c("DCB","NDB"))
@@ -76,7 +81,7 @@ stat_compare_means(comparisons = my_comparisons)+
 theme(legend.position="none",
 text=element_text(size=13,hjust = 0.5),
 plot.title = element_text(size=13,hjust = 0.5))
-ggsave("Fig2F Response_HAPS.pdf",p1,height=5,width=5)
+ggsave("Figure2.Response_HAPS.pdf",p1,height=5,width=5)
 
 ########
 
@@ -116,11 +121,11 @@ scale_fill_manual(values = c("#E64B35","#4DBBD5",
 "#00A087","#3C5488"))+
 geom_hline(yintercept=c(10),linetype=2,color="black")
 
-ggsave("Fig 2 Sample RECIST.pdf",p1,height=5,width=5)
+ggsave("Figure2.Sample_RECIST.pdf",p1,height=5,width=5)
 
 
 ###########
-data<-read.xlsx("../Wang_Panel.xlsx",sheet=1)
+data<-read.xlsx("./Wang_Panel.xlsx",sheet=1)
 
 p1<-ggplot(data,aes(x=HAPS,fill=Batch))+
 geom_density(alpha=0.8)+
@@ -131,7 +136,7 @@ ylab("The Ratio of HAPS")+
 theme(legend.title=element_blank(),
 text=element_text(size=15,hjust = 0.5),
 legend.position="top")
-ggsave("Fig2K panel_HAPS_density.pdf",p1,height=6,width=6)
+ggsave("Figure2.panel_HAPS_density.pdf",p1,height=6,width=6)
 
 
 

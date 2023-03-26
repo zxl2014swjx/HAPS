@@ -1,6 +1,6 @@
 ##Figure6
 source("/users/zhuxl/HAPS/Code_Script/0.suppressMessages.R")
-setwd("/users/zhuxl/HAPS/Code_Script/Figure 6")
+setwd("/users/zhuxl/HAPS/Code_Script/")
 
 data<-read.xlsx("./Model.xlsx",sheet=1)
 p1<-data %>% 

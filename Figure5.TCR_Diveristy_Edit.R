@@ -1,6 +1,6 @@
 ##Figure5.A
 source("/users/zhuxl/HAPS/Code_Script/0.suppressMessages.R")
-setwd("/users/zhuxl/HAPS/Code_Script/Figure 5")
+setwd("/users/zhuxl/HAPS/Code_Script")
 
 data<-read.xlsx("./TCR.xlsx",sheet=1)
 

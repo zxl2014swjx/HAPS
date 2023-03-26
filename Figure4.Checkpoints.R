@@ -1,6 +1,6 @@
 ##Figure4.BCDE
 source("/users/zhuxl/HAPS/Code_Script/0.suppressMessages.R")
-setwd("/users/zhuxl/HAPS/Code_Script/Figure 4")
+setwd("/users/zhuxl/HAPS/Code_Script/")
 
 data<-read.xlsx("./Immune_Score.xlsx",sheet=2)
 data$group<-rep("",dim(data)[1])

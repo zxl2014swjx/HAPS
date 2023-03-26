@@ -1,8 +1,8 @@
 ##Figure1.A & C
 source("/users/zhuxl/HAPS/Code_Script/0.suppressMessages.R")
-setwd("/users/zhuxl/HAPS/Code_Script/Figure 1")
+setwd("/users/zhuxl/HAPS/Code_Script")
 
-data<-read.xlsx("../WES_Cohort.xlsx",sheet=1)
+data<-read.xlsx("./WES_Cohort.xlsx",sheet=1)
 dim(data)
 #[1] 1125   29
 #head(data)
@@ -256,7 +256,7 @@ ggsave("Figure1.D&E.sur.pdf",p,height = 5,width = 9)
 #############################################
 
 
-all<-read.xlsx("../WES_Cohort.xlsx",sheet=2)
+all<-read.xlsx("./WES_Cohort.xlsx",sheet=2)
 tapply(all$NeoantigenQuality,all$group,summary)
 
 all$NeoantigenQuality<-log10(all$NeoantigenQuality+1)

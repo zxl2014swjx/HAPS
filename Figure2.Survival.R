@@ -1,8 +1,8 @@
 ##Figure2.Sur
 source("/users/zhuxl/HAPS/Code_Script/0.suppressMessages.R")
-setwd("/users/zhuxl/HAPS/Code_Script/Figure 2")
+setwd("/users/zhuxl/HAPS/Code_Script/")
 
-data<-read.xlsx("../WES_Cohort.xlsx",sheet=1)
+data<-read.xlsx("./WES_Cohort.xlsx",sheet=1)
 dim(data)
 #[1] 1125   29
 #head(data)
@@ -128,7 +128,7 @@ PFS<-ggsurvplot(fit, data =data2 ,
 
 
 ############
-data<-read.xlsx("../Wang_Panel.xlsx",sheet=1)
+data<-read.xlsx("./Wang_Panel.xlsx",sheet=1)
 dim(data)
 #[1] 93 24
 
@@ -216,10 +216,3 @@ dev.off()
 ggsave("Figure2.Survival.pdf",p,height = 12,width = 10)
 
 ###############
-data<-read.table("")
-
-
-
-
-
-
