@@ -253,5 +253,49 @@ p<-arrange_ggsurvplots(list(li[[1]],li[[2]]),
 nrow=1,ncol=2)
 ggsave("Figure1.D&E.sur.pdf",p,height = 5,width = 9)
 
-#####################END########################
+#############################################
+
+
+all<-read.xlsx("../WES_Cohort.xlsx",sheet=2)
+tapply(all$NeoantigenQuality,all$group,summary)
+
+all$NeoantigenQuality<-log10(all$NeoantigenQuality+1)
+
+
+my_comparisons <- list( c("High HAPS","Low HAPS"))
+
+plt2<-ggplot(all,aes(x=group,y=NeoantigenQuality,fill=group)) +
+geom_violin(position = position_dodge(0.9),
+alpha = 0.8,width = 1.2,trim = F,color = "grey50") +
+geom_boxplot(width = 0.2,
+show.legend = F,position = position_dodge(0.9),
+color = 'grey20',alpha = 0.8,
+outlier.color = 'grey50') +
+xlab("")+ylab("Neoantigen Quantily")+
+#geom_point(color="black",size=1,position="identity")+
+#geom_jitter(position="jitter",colour="grey20")+
+theme_classic()+
+scale_fill_manual(values = c(c("#CB3425","#3F5688")))+
+theme(legend.position="none",
+text=element_text(size=15,hjust = 0.5))+
+stat_compare_means(comparisons = my_comparisons)
+
+plt1<-ggplot(all,aes(x=NeoantigenQuality,
+fill=group))+
+geom_density(alpha=0.8)+
+theme_classic()+
+scale_fill_manual(values = c("#CB3425","#3F5688"))+
+xlab("HAPS Group")+
+ylab("The Ratio of Neoantigen Quality")+
+theme(legend.title=element_blank(),
+text=element_text(size=15,hjust = 0.5),
+legend.position="top")
+
+best1<-plot_grid(plt1,plt2,nrow=2,ncol=1,rel_heights = c(1,1))
+
+ggsave("Figure1.Quality.pdf",best1,height = 9,width =6)
+
+
+
+###################END##########################
 
