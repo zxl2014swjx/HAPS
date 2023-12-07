@@ -15,7 +15,7 @@ Email：zxl2014swjx@126.com or zhuxiuli@big.ac.cn
 
 **Workflow Accessible:** 
 
-The source data and code of HAPS algotithm: https://doi.org/10.6084/m9.figshare.24763653.v1
+The source data and code of HAPS algotithm: https://doi.org/10.6084/m9.figshare.24763899.v1
 
 The workflow of neoantigen pipeline: https://doi.org/10.6084/m9.figshare.24763629.v1
 
