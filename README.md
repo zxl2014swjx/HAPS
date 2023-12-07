@@ -19,6 +19,5 @@ The source data and code of HAPS algotithm: https://doi.org/10.6084/m9.figshare.
 
 The workflow of neoantigen pipeline: https://doi.org/10.6084/m9.figshare.24763629.v1
 
-![image](https://github.com/zxl2014swjx/HAPS/assets/54253876/c971c829-c249-4958-b3b6-0336f6833d7d)
 
 
