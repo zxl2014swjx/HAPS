@@ -19,5 +19,5 @@ The source data and code of HAPS algotithm: https://doi.org/10.6084/m9.figshare.
 
 The workflow of neoantigen pipeline: https://doi.org/10.6084/m9.figshare.24763629.v1
 
-
-
+**Please cite:** 
+Han, J., Dong, Y., Zhu, X., Reuben, A., Zhang, J., Xu, J., Bai, H., Duan, J., Wan, R., Zhao, J., Bai, J., Xia, X., Yi, X., Cheng, C., Wang, J., & Wang, Z. (2024). Assessment of human leukocyte antigen-based neoantigen presentation to determine pan-cancer response to immunotherapy. Nature communications, 15(1), 1199. https://doi.org/10.1038/s41467-024-45361-5
